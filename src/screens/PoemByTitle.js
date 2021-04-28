@@ -40,6 +40,11 @@ export class PoemByTitle extends React.Component {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
+            <TouchableOpacity
+              style={{position: 'absolute', left: 5}}
+              onPress={() => this.props.navigation.goBack()}>
+              <Text style={{color: 'white', fontSize: 30}}>{'<--'}</Text>
+            </TouchableOpacity>
             <Text
               style={{
                 fontSize: 20,
@@ -60,7 +65,7 @@ export class PoemByTitle extends React.Component {
                     borderWidth: 2,
                     width: '95%',
                     alignSelf: 'center',
-                    marginTop: 15,
+                    marginTop: 2,
                     borderColor: '#065e54',
                     borderRadius: 15,
                   }}>

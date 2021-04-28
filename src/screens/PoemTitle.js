@@ -38,6 +38,11 @@ export class PoemTitle extends React.Component {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
+            <TouchableOpacity
+              style={{position: 'absolute', left: 10}}
+              onPress={() => this.props.navigation.goBack()}>
+              <Text style={{color: 'white', fontSize: 30}}>{'<--'}</Text>
+            </TouchableOpacity>
             <Text
               style={{
                 color: '#ffff',
@@ -81,24 +86,12 @@ export class PoemTitle extends React.Component {
                       justifyContent: 'space-evenly',
                       marginVertical: '2%',
                     }}>
-                    <Text
-                      style={{
-                        fontSize: 25,
-                        fontWeight: 'bold',
-                        alignSelf: 'center',
-                        padding: 10,
-                        fontFamily: 'serif',
-                        fontStyle: 'italic',
-                        textAlign: 'center',
-                      }}>
-                      {index}
-                    </Text>
                     <TouchableOpacity
                       style={{
                         borderWidth: 2,
                         borderRadius: 30,
                         borderColor: '#065e54',
-                        width: '80%',
+                        width: '100%',
                         justifyContent: 'center',
                         alignItems: 'center',
                       }}

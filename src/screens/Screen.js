@@ -8,7 +8,8 @@ import {
   FlatList,
   ActivityIndicator,
 } from 'react-native';
-
+const backIcon =
+  'https://www.flaticon.com/svg/vstatic/svg/93/93634.svg?token=exp=1619632465~hmac=8e038de313559ffade11dd8aa2cf0260';
 export class Screen extends React.Component {
   constructor() {
     super();
@@ -38,6 +39,11 @@ export class Screen extends React.Component {
               justifyContent: 'center',
               alignItems: 'center',
             }}>
+            <TouchableOpacity
+              style={{position: 'absolute', left: 10}}
+              onPress={() => this.props.navigation.goBack()}>
+              <Text style={{color: 'white', fontSize: 30}}>{'<--'}</Text>
+            </TouchableOpacity>
             <Text
               style={{
                 color: '#ffff',
@@ -82,24 +88,12 @@ export class Screen extends React.Component {
                       marginVertical: '2%',
                       height: 70,
                     }}>
-                    <Text
-                      style={{
-                        fontSize: 25,
-                        fontWeight: 'bold',
-                        alignSelf: 'center',
-                        padding: 10,
-                        fontFamily: 'serif',
-                        fontStyle: 'italic',
-                        textAlign: 'center',
-                      }}>
-                      {index}
-                    </Text>
                     <TouchableOpacity
                       style={{
                         borderWidth: 2,
                         borderRadius: 30,
                         borderColor: '#065e54',
-                        width: '80%',
+                        width: '100%',
                         justifyContent: 'center',
                         alignItems: 'center',
                       }}
